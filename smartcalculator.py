@@ -119,7 +119,7 @@ operations = {'ADD':add , 'ADDITION':add , 'SUM':add , 'PLUS':add , 'ADDED':add,
 
 win = Tk()
 
-win.geometry('600x700')
+win.geometry('600x670')
 win.title('Smart Tiya')
 win.configure(bg='#14213d')
 
@@ -129,29 +129,29 @@ c.configure(bg='#14213d' , highlightthickness=0)
 
 c.body_color = '#ffd32a'
 
-body = c.create_oval(35,20,365,350,outline=c.body_color , fill=c.body_color)
-foot_left = c.create_oval(65,320,145,360 , outline=c.body_color , fill=c.body_color)
-foot_right = c.create_oval(250,320,330,360 , outline=c.body_color , fill=c.body_color)
+body = c.create_oval(55,20,320,300,outline=c.body_color , fill=c.body_color)
+foot_left = c.create_oval(65,280,145,310 , outline=c.body_color , fill=c.body_color)
+foot_right = c.create_oval(225,280,305,310 , outline=c.body_color , fill=c.body_color)
 
-ear_left = c.create_polygon(75,80,75,10,165,70,outline=c.body_color , fill=c.body_color)
-ear_right = c.create_polygon(255,45,325,10,320,70,outline=c.body_color , fill=c.body_color)
+ear_left = c.create_polygon(78,80,78,10,165,70,outline=c.body_color , fill=c.body_color)
+ear_right = c.create_polygon(230,45,289,10,289,70,outline=c.body_color , fill=c.body_color)
 
-eye_left = c.create_oval(130,110,160,170,outline='black' , fill='white')
-pupil_left = c.create_oval(140,145,150,155,outline='black' , fill='black')
+eye_left = c.create_oval(120,110,150,170,outline='black' , fill='white')
+pupil_left = c.create_oval(130,145,140,155,outline='black' , fill='black')
 eye_right = c.create_oval(230,110,260,170,outline='black' , fill='white')
 pupil_right = c.create_oval(240,145,250,155,outline='black' , fill='black')
 
-mouth_normal = c.create_line(170,250,200,272,230,250,smooth=1 , width=2 , state=NORMAL)
-mouth_happy = c.create_line(170,250,200,282,230,250,smooth=1 , width=2 , state=HIDDEN)
-mouth_sad = c.create_line(170,250,200,232,230,250,smooth=1 , width=2 , state=HIDDEN)
+mouth_normal = c.create_line(160,230,190,250,220,230,smooth=1 , width=2 , state=NORMAL)
+mouth_happy = c.create_line(160,230,190,265,220,230,smooth=1 , width=2 , state=HIDDEN)
+mouth_sad = c.create_line(160,230,190,212,220,230,smooth=1 , width=2 , state=HIDDEN)
 
-tongue_main = c.create_rectangle(170,250,230,290,outline='red' , fill='red',state=HIDDEN)
-tongue_tip = c.create_oval(170,285,230,300,outline='red' , fill='red',state=HIDDEN)
+tongue_main = c.create_rectangle(160,230,220,270,outline='red' , fill='red',state=HIDDEN)
+tongue_tip = c.create_oval(160,255,220,280,outline='red' , fill='red',state=HIDDEN)
 
 cheek_left = c.create_oval(70,180,120,230,outline='pink' , fill='#d63031',state=HIDDEN)
-cheek_right = c.create_oval(280,180,330,230,outline='pink' , fill='#d63031',state=HIDDEN)
+cheek_right = c.create_oval(255,180,305,230,outline='pink' , fill='#d63031',state=HIDDEN)
 
-c.place(x=100,y=90)
+c.place(x=110,y=90)
 
 c.bind('<Motion>' , show_happy)
 c.bind('<Leave>' , hide_happy)
@@ -186,17 +186,17 @@ l1.place(x=110,y=10)
 l2 = Label(win , text='I am a Smart Calculator' , padx=3,font=("Arial", 12))
 l2.place(x=215,y=55)
 l3 = Label(win , text='How can i help you?',font=("Arial", 12))
-l3.place(x=225,y=470)
+l3.place(x=225,y=430)
 
 textin = StringVar()
 e1 = Entry(win , width=30, textvariable = textin,font=("Arial", 17))
-e1.place(x=105,y=505)
+e1.place(x=105,y=465)
 
 b1 = Button(win , text='Just this' ,command=calculate,font=("Arial", 9))
-b1.place(x=270,y=545)
+b1.place(x=270,y=505)
 
 list = Listbox(win,width=30,height=3,font=("Arial", 18))
-list.place(x=105,y=580)
+list.place(x=105,y=540)
 
 win.after(1000,blink)
 win.after(5000,sad)
